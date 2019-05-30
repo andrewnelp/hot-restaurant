@@ -3,9 +3,9 @@ const express = require("express");
 const app = express();
 const path = require ("path");
 const PORT = process.env.PORT || 8888;
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
 
 //including html routes into the server file
 //(app) means express-routes first because we first pull data to display in html pages;
